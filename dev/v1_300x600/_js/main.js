@@ -16,7 +16,7 @@ tl.to(".t1", .3, {x:"+=100", opacity:0}, "end")
 tl.to(".logo", .6, {x:-150, y:-300, scale:.5}, "end")
 tl.add(characters, "end")
 
-tl.from(".t2_a", .3, {x:"-=100", opacity:0})
+tl.from(".t2_a", .3, {x:"-=100", opacity:0}, "+=.6")
 tl.from(".t2_b", .5, {opacity:0}, "+=.2")
 tl.from(".t2_c", .5, {opacity:0})
 
