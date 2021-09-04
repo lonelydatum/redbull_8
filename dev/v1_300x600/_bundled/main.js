@@ -30,29 +30,42 @@ exports.init = init;
 var _commonJsCommonJs = require('../../_common/js/common.js');
 
 var tl = (0, _commonJsCommonJs.init)();
-tl.from(".logo", .4, { scale: 2, ease: Power3.easeInOut, opacity: 0 });
+tl.from(".logo", .6, { scale: 2, ease: Power4.easeIn, opacity: 0 });
 
-tl.from(".logo", .05, { x: "+=1", y: "+=1", ease: Power4.easeInOut });
-tl.from(".logo", .05, { x: "-=1", y: "-=1", ease: Power4.easeInOut });
-tl.from(".logo", .05, { x: "+=1", y: "+=1", ease: Power4.easeInOut });
-tl.from(".logo", .05, { x: "-=1", y: "-=1", ease: Power4.easeInOut });
+tl.add(rumble);
 
-tl.from(".t1", .3, { x: "-=300" }, .7);
+tl.from(".t1", .3, { x: "-=100", opacity: 0 }, "+=.25");
 
-tl.add("end", "+=1");
-tl.to(".t1", .3, { x: "+=300" }, "end");
-tl.to(".logo", .3, { x: -150, y: -300, scale: .5 }, "end");
+tl.add("end", "+=1.2");
+tl.to(".t1", .3, { x: "+=100", opacity: 0 }, "end");
+tl.to(".logo", .6, { x: -150, y: -300, scale: .5 }, "end");
+tl.add(characters, "end");
 
-tl.set(".frame2", { opacity: 1 });
-tl.from(".char_m", .3, { opacity: 0 });
-tl.from(".char_gamer_w", .3, { opacity: 0 });
-tl.from(".char_gamer_m", .3, { opacity: 0 });
-tl.from(".char_w", .3, { opacity: 0 });
-tl.from(".char_desk", .3, { opacity: 0 });
+tl.from(".t2_a", .3, { x: "-=100", opacity: 0 });
+tl.from(".t2_b", .5, { opacity: 0 }, "+=.2");
+tl.from(".t2_c", .5, { opacity: 0 });
 
-tl.from(".t2_a", .3, { x: "-=300" });
-tl.from(".t2_b", .3, { opacity: 0 });
-tl.from(".t2_c", .3, { opacity: 0 });
+function rumble() {
+	var TIME = .05;
+	var tl = new TimelineMax();
+	tl.from(".logo", TIME, { x: "+=6", y: "+=6", ease: Power4.easeInOut });
+	tl.from(".logo", TIME, { x: "-=6", y: "-=6", ease: Power4.easeInOut });
+	tl.from(".logo", TIME, { x: "+=3", y: "+=3", ease: Power4.easeInOut });
+	tl.from(".logo", TIME, { x: "-=3", y: "-=3", ease: Power4.easeInOut });
+}
+
+function characters() {
+	var TIME = .5;
+
+	var tl = new TimelineMax();
+	tl.set(".frame2", { opacity: 1 });
+	var list = [".char_m", ".char_gamer_w", ".char_gamer_m", ".char_w", ".char_desk"];
+	list.map(function (item) {
+		tl.from(item, TIME, { opacity: 0, ease: Power2.easeIn }, "-=.35");
+	});
+
+	tl.from(".swirl", TIME, { opacity: 0, ease: Power2.easeIn });
+}
 
 module.exports = {};
 
