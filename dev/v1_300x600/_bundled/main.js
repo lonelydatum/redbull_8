@@ -18,32 +18,23 @@ function init() {
 
 	tl.set(".frame1", { opacity: 1 });
 
+	tl.from(".logo", .6, { scale: 2, ease: Power4.easeIn, opacity: 0 });
+
+	tl.add(rumble);
+
+	tl.from(".t1", .3, { x: "-=100", opacity: 0 }, "+=.25");
+
+	tl.add("end", "+=1.2");
+	tl.to(".t1", .3, { x: "+=100", opacity: 0 }, "end");
+	tl.to(".logo", .6, { x: "-" + size.w / 2, y: -("" + size.h / 2), scale: .5 }, "end");
+	tl.add(characters, "end");
+
+	tl.from(".t2_a", .3, { x: "-=100", opacity: 0 }, "+=.6");
+	tl.from(".t2_b", .5, { opacity: 0 }, "+=.2");
+	tl.from(".t2_c", .5, { opacity: 0 });
+
 	return tl;
 }
-
-exports.size = size;
-exports.init = init;
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-var _commonJsCommonJs = require('../../_common/js/common.js');
-
-var tl = (0, _commonJsCommonJs.init)();
-tl.from(".logo", .6, { scale: 2, ease: Power4.easeIn, opacity: 0 });
-
-tl.add(rumble);
-
-tl.from(".t1", .3, { x: "-=100", opacity: 0 }, "+=.25");
-
-tl.add("end", "+=1.2");
-tl.to(".t1", .3, { x: "+=100", opacity: 0 }, "end");
-tl.to(".logo", .6, { x: -150, y: -300, scale: .5 }, "end");
-tl.add(characters, "end");
-
-tl.from(".t2_a", .3, { x: "-=100", opacity: 0 }, "+=.6");
-tl.from(".t2_b", .5, { opacity: 0 }, "+=.2");
-tl.from(".t2_c", .5, { opacity: 0 });
 
 function rumble() {
 	var TIME = .05;
@@ -66,6 +57,16 @@ function characters() {
 
 	tl.from(".swirl", TIME, { opacity: 0, ease: Power2.easeIn });
 }
+
+exports.size = size;
+exports.init = init;
+
+},{}],2:[function(require,module,exports){
+'use strict';
+
+var _commonJsCommonJs = require('../../_common/js/common.js');
+
+var tl = (0, _commonJsCommonJs.init)();
 
 module.exports = {};
 

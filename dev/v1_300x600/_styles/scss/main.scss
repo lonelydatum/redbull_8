@@ -12,8 +12,5 @@
 
 .logo{
 	transform-origin: 50% 50%;
-	
-	@include pos-scale(-156, -313, 0.635);
-	// @include pos-scale(-150, -300, .5);
-	// opacity: .7;
+	@include pos-scale(-156, -313, 0.635);	
 }

@@ -1,10 +1,9 @@
 
 
 
-import {init} from '../../_common/js/common.js'
+import {init, size} from '../../_common/js/common.js'
 
 const tl = init()
-
 
 
 module.exports = {};

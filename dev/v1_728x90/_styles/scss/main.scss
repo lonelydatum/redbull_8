@@ -1,0 +1,16 @@
+@import '../../../_common/styles/common.scss';
+
+
+#banner{
+	width: 728px;
+	height: 90px;
+}
+
+.frame1{
+	// opacity: 1;
+}
+
+.logo{
+	transform-origin: 160px 90px;
+	@include pos-scale(-80, -45, 0.5);
+}

@@ -170,4 +170,18 @@ sup {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 4%, transparent 52%);
 }
 
+.logo {
+  -webkit-transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: translate(-154px, -90px) scale(0.635, 0.635);
+  -ms-transform: translate(-154px, -90px) scale(0.635, 0.635);
+  transform: translate(-154px, -90px) scale(0.635, 0.635);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+}
+
 /*# sourceMappingURL=main.css.map */
