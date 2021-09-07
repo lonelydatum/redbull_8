@@ -27,12 +27,12 @@ function init_v2(){
 
 	tl.add(rumble)
 
-	tl.from(".t1", .3, {x:"-=100", opacity:0}, "+=.6")
+	tl.from(".t1", .3, {x:"-=50", opacity:0}, "+=.6")
 
 
 	tl.add("end", "+=1.2")
-	tl.to(".t1", .3, {x:"+=100", opacity:0}, "end")
-	tl.to(".logo", .6, {x:-600, scale:.5}, "end")
+	tl.to(".t1", .3, {x:"+=50", opacity:0}, "end")
+	tl.to(".logo", .6, {x:-600, y:-45, scale:.5}, "end")
 	tl.to(".char_m", .3, {x:"-=100",  opacity:0, ease:Power3.easeInOut}, "end")
 	tl.to(".char_w", .3, {x:"+=100",  opacity:0, ease:Power3.easeInOut}, "end")
 

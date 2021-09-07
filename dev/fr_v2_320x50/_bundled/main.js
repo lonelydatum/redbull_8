@@ -111,8 +111,8 @@ function init() {
 	tl.from(".logo", .4, { scale: 2, ease: Power4.easeIn, opacity: 0 });
 	tl.add(rumble);
 
-	tl.from(".t1", .3, { x: "-=50", opacity: 0 }, "+=.25");
-	tl.to(".t1", .3, { x: "-=50", opacity: 0 }, "+=1.5");
+	tl.from(".t1", .3, { x: "-=20", opacity: 0 }, "+=.25");
+	tl.to(".t1", .3, { x: "-=20", opacity: 0 }, "+=1.5");
 	tl.to(".logo", .5, { scale: .5, x: -280, ease: Power2.easeOut }, "-=.2");
 
 	tl.set(".frame2", { opacity: 1 });
