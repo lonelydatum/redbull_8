@@ -1,0 +1,13 @@
+@import '../../../_common/styles/common.scss';
+
+
+.frame1{
+	// opacity: 1;
+}
+
+.logo{
+	transform-origin: 50% 50%;
+	@include pos-scale(-154, -233, 0.7);	
+
+	
+}

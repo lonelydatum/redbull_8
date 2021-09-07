@@ -1,0 +1,10 @@
+@import '../../../_common/styles/common.scss';
+
+
+
+.logo{
+	transform-origin: 50% 50%;
+	@include pos-scale(-154, -90, 0.635);	
+
+	// matrix(.635, 0, 0, 0.635, -154, -90)
+}
