@@ -179,9 +179,9 @@ sup {
   -webkit-transform-origin: 1200px 90px;
   -ms-transform-origin: 1200px 90px;
   transform-origin: 1200px 90px;
-  -webkit-transform: translate(-958px, -45px) scale(0.5, 0.5);
-  -ms-transform: translate(-958px, -45px) scale(0.5, 0.5);
-  transform: translate(-958px, -45px) scale(0.5, 0.5);
+  -webkit-transform: translate(-1029px, -45px) scale(0.5, 0.5);
+  -ms-transform: translate(-1029px, -45px) scale(0.5, 0.5);
+  transform: translate(-1029px, -45px) scale(0.5, 0.5);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-perspective: 1000px;
